@@ -40,7 +40,7 @@ program = {
             "lua-cjson",
             "penlight",
         ],
-        "speical": [],
+        "speical": ["sudo npm install --global lua-fmt"],
     },
     "python3": {
         "common": ["python3", "python3-pip"],
