@@ -10,7 +10,10 @@ devtools = {
 }
 
 program = {
-    "bash": {"common": ["bash-completion",]},
+    "bash": {
+        "common": ["bash-completion"],
+        "special": ["npm i -g bash-language-server"],
+    },
     "cxx": {
         "common": [
             "cppcheck",
