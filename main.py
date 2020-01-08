@@ -79,7 +79,8 @@ applications = {
     ],
     "apt": [],
     "yum": [],
-    "brew": [],
+    "brew": ["npm"],
+    "brew-cask": ["shadowsocksx-ng", "shadowsocksx-ng"],
 }
 
 
