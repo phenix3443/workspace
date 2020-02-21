@@ -80,7 +80,7 @@ applications = {
     "apt": [],
     "yum": [],
     "brew": ["npm", "node"],
-    "brew-cask": ["shadowsocksx-ng", "shadowsocksx-ng", "iina"],
+    "brew-cask": ["shadowsocksx-ng", "shadowsocksx-ng", "iina", "telegram"],
 }
 
 
