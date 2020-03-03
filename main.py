@@ -16,7 +16,6 @@ APT = {
         "tmux",
         "curl",
         "zeal",
-        "git",
         "bash-completion",
         "shutter",
         "shadowsocks-libev",
@@ -46,6 +45,7 @@ APT = {
     "golang": ["golang"],
     "js": ["npm", "node"],
     "markdown": ["markdown"],
+    "git": ["git", "git-flow"],
 }
 
 YUM = {
@@ -71,6 +71,7 @@ Brew = {
     "python": ["python3"],
     "golang": ["golang"],
     "js": ["npm", "node"],
+    "git": ["git", "git-flow"],
 }
 
 BrewCask = [
