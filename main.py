@@ -75,13 +75,7 @@ Brew = {
     "git": ["git", "git-flow"],
 }
 
-BrewCask = [
-    "dash",
-    "shadowsocksx-ng",
-    "chromium",
-    "iina",
-    "emacs",
-]
+BrewCask = ["dash", "shadowsocksx-ng", "chromium", "iina", "emacs", "beyond-compare"]
 
 
 NPM = [
