@@ -66,6 +66,7 @@ Brew = {
         "sshfs",
         "markdown",
     ],
+    "bash": ["bash-completion"],
     "cxx": [],
     "lua": ["lua", "luarocks"],
     "python": ["python3"],
@@ -105,6 +106,23 @@ LuaRocks = [
 Pip = ["pipenv", "ipython", "yapf", "pylint", "black"]
 
 GO = ["GO111MODULE=on go get golang.org/x/tools/gopls@latest"]
+
+Linux = [
+    (
+        "mkdir -p ~/github && cd ~/github",
+        " && git clone git@github.com:bobthecow/git-flow-completion.git",
+        " && cp git-flow-completion/git-flow-completion.bash /usr/local/etc/bash_completion.d/",
+    ),  # 安装git-flow-completion
+]
+
+MacOS = [
+    """echo [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] \&\& . "/usr/local/etc/profile.d/bash_completion.sh"' >> ~/.bash_profile""",  # install bash completion
+    (
+        "mkdir -p ~/github && cd ~/github",
+        " && git clone git@github.com:bobthecow/git-flow-completion.git",
+        " && cp git-flow-completion/git-flow-completion.bash /usr/local/etc/bash_completion.d/",
+    ),  # 安装git-flow-completion
+]
 
 
 def main():
