@@ -28,6 +28,7 @@ APT = {
         "silversearcher-ag",
         "emacs",
         "google-chrome-stable",
+        "sogoupinyin",
     ],
     "cxx": [
         "cppcheck",
