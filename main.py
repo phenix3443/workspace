@@ -102,7 +102,6 @@ Pip = ["pipenv", "ipython", "yapf", "pylint", "black"]
 
 GO = ["GO111MODULE=on go get golang.org/x/tools/gopls@latest"]
 
-yarn = []
 
 Linux = [
     (
@@ -112,13 +111,19 @@ Linux = [
     )  # 安装git-flow-completion
 ]
 
-MacOS = [
+Shell = [
     """echo [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] \&\& . "/usr/local/etc/profile.d/bash_completion.sh"' >> ~/.bash_profile""",  # install bash completion
     (
         "mkdir -p ~/github && cd ~/github",
         " && git clone git@github.com:bobthecow/git-flow-completion.git",
         " && cp git-flow-completion/git-flow-completion.bash /usr/local/etc/bash_completion.d/",
     ),  # 安装git-flow-completion
+    (
+        "git config --global diff.tool bc3",
+        "&& git config --global merge.tool bc3",
+        "&& git config --global mergetool.bc3 trustExitCode true",
+        "&& git config --global mergetool.keepBackup false",
+    ),
 ]
 
 
