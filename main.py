@@ -23,11 +23,11 @@ APT = {
         "albert",
         "alacarte",
         "aria2",
-        "chromium-browser",
         "okular",
         "smplayer",
         "silversearcher-ag",
         "emacs",
+        "google-chrome-stable",
     ],
     "cxx": [
         "cppcheck",
@@ -48,14 +48,7 @@ APT = {
     "git": ["git", "git-flow"],
 }
 
-YUM = {
-    "app": [],
-    "cxx": [],
-    "lua": [],
-    "python": [],
-    "golang": [],
-    "js": [],
-}
+YUM = {"app": [], "cxx": [], "lua": [], "python": [], "golang": [], "js": []}
 
 Brew = {
     "app": [
@@ -78,11 +71,7 @@ Brew = {
 BrewCask = ["dash", "shadowsocksx-ng", "chromium", "iina", "emacs", "beyond-compare"]
 
 
-NPM = [
-    "livedown",
-    "bash-language-server",
-    "lua-fmt",
-]
+NPM = ["livedown", "bash-language-server", "lua-fmt"]
 
 LuaRocks = [
     "luacheck",
@@ -106,7 +95,7 @@ Linux = [
         "mkdir -p ~/github && cd ~/github",
         " && git clone git@github.com:bobthecow/git-flow-completion.git",
         " && cp git-flow-completion/git-flow-completion.bash /usr/local/etc/bash_completion.d/",
-    ),  # 安装git-flow-completion
+    )  # 安装git-flow-completion
 ]
 
 MacOS = [
