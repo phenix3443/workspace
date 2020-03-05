@@ -6,28 +6,37 @@ AptPPA = [
     "add-apt-repository ppa:zeal-developers/ppa",
     "curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -",
     "sudo sh -c \"echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list\"",
+    "add-apt-repository ppa:apt-fast/stable",  # apt-fast
     "apt update",  # 始终放在最后
 ]
 
 APT = {
     "app": [
-        "zssh",
-        "sshfs",
-        "tmux",
-        "curl",
-        "zeal",
-        "bash-completion",
-        "shutter",
-        "shadowsocks-libev",
-        "proxychains4",
-        "albert",
         "alacarte",
+        "albert",
+        "apt-fast",  # 要选择apt-get，选择apt好像有点问题
         "aria2",
-        "chromium-browser",
-        "okular",
-        "smplayer",
-        "silversearcher-ag",
+        "bash-completion",
+        "curl",
         "emacs",
+        "fish",
+        "foxitreader",
+        "google-chrome-stable",
+        "netease-cloud-music",
+        "okular",
+        "proxychains4",
+        "shadowsocks-libev",
+        "shutter",
+        "silversearcher-ag",
+        "smartgit",
+        "smplayer",
+        "sogoupinyin",
+        "sshfs",
+        "sublime-text",
+        "synergy",
+        "tmux",
+        "zeal",
+        "zssh",
     ],
     "cxx": [
         "cppcheck",
@@ -40,22 +49,16 @@ APT = {
         "libtool",
         "gcc",
     ],
-    "lua": ["lua", "luarocks"],
-    "python": ["python3", "python3-pip"],
+    "lua": ["lua luarocks"],
+    "python": ["python3 python3-pip"],
     "golang": ["golang"],
-    "js": ["npm", "node"],
+    "js": ["npm node"],
     "markdown": ["markdown"],
-    "git": ["git", "git-flow"],
+    "git": ["git git-flow"],
+    "mysql": ["mysql-server mysql-client mysql-utilities mysql-workbench"],
 }
 
-YUM = {
-    "app": [],
-    "cxx": [],
-    "lua": [],
-    "python": [],
-    "golang": [],
-    "js": [],
-}
+YUM = {"app": [], "cxx": [], "lua": [], "python": [], "golang": [], "js": []}
 
 Brew = {
     "app": [
@@ -81,6 +84,7 @@ BrewCask = ["dash", "shadowsocksx-ng", "chromium", "iina", "emacs", "beyond-comp
 
 NPM = ["livedown", "bash-language-server", "lua-fmt", "typescript-language-server"]
 
+
 LuaRocks = [
     "luacheck",
     "lanes",
@@ -105,7 +109,7 @@ Linux = [
         "mkdir -p ~/github && cd ~/github",
         " && git clone git@github.com:bobthecow/git-flow-completion.git",
         " && cp git-flow-completion/git-flow-completion.bash /usr/local/etc/bash_completion.d/",
-    ),  # 安装git-flow-completion
+    )  # 安装git-flow-completion
 ]
 
 MacOS = [
