@@ -65,6 +65,7 @@ Brew = {
         "proxychains-ng",
         "sshfs",
         "markdown",
+        "opam",
     ],
     "bash": ["bash-completion"],
     "cxx": [],
@@ -78,11 +79,7 @@ Brew = {
 BrewCask = ["dash", "shadowsocksx-ng", "chromium", "iina", "emacs", "beyond-compare"]
 
 
-NPM = [
-    "livedown",
-    "bash-language-server",
-    "lua-fmt",
-]
+NPM = ["livedown", "bash-language-server", "lua-fmt", "typescript-language-server"]
 
 LuaRocks = [
     "luacheck",
@@ -100,6 +97,8 @@ LuaRocks = [
 Pip = ["pipenv", "ipython", "yapf", "pylint", "black"]
 
 GO = ["GO111MODULE=on go get golang.org/x/tools/gopls@latest"]
+
+yarn = []
 
 Linux = [
     (
