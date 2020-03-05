@@ -6,29 +6,36 @@ AptPPA = [
     "add-apt-repository ppa:zeal-developers/ppa",
     "curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -",
     "sudo sh -c \"echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list\"",
+    "add-apt-repository ppa:apt-fast/stable",  # apt-fast
     "apt update",  # 始终放在最后
 ]
 
 APT = {
     "app": [
-        "zssh",
-        "sshfs",
-        "tmux",
-        "curl",
-        "zeal",
-        "bash-completion",
-        "shutter",
-        "shadowsocks-libev",
-        "proxychains4",
-        "albert",
         "alacarte",
+        "albert",
+        "apt-fast",  # 要选择apt-get，选择apt好像有点问题
         "aria2",
-        "okular",
-        "smplayer",
-        "silversearcher-ag",
+        "bash-completion",
+        "curl",
         "emacs",
         "google-chrome-stable",
+        "okular",
+        "proxychains4",
+        "shadowsocks-libev",
+        "shutter",
+        "silversearcher-ag",
+        "smplayer",
         "sogoupinyin",
+        "sshfs",
+        "tmux",
+        "zeal",
+        "zssh",
+        "fish",
+        "foxitreader",
+        "smartgit",
+        "sublime-text",
+        "netease-cloud-music",
     ],
     "cxx": [
         "cppcheck",
@@ -41,12 +48,13 @@ APT = {
         "libtool",
         "gcc",
     ],
-    "lua": ["lua", "luarocks"],
-    "python": ["python3", "python3-pip"],
+    "lua": ["lua luarocks"],
+    "python": ["python3 python3-pip"],
     "golang": ["golang"],
-    "js": ["npm", "node"],
+    "js": ["npm node"],
     "markdown": ["markdown"],
-    "git": ["git", "git-flow"],
+    "git": ["git git-flow"],
+    "mysql": ["mysql-server mysql-client mysql-utilities mysql-workbench"],
 }
 
 YUM = {"app": [], "cxx": [], "lua": [], "python": [], "golang": [], "js": []}
