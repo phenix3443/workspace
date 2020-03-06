@@ -52,7 +52,7 @@ APT = {
     "lua": ["lua luarocks"],
     "python": ["python3 python3-pip"],
     "golang": ["golang"],
-    "js": ["npm node"],
+    "js": ["npm node yarn"],
     "markdown": ["markdown"],
     "git": ["git git-flow"],
     "mysql": ["mysql-server mysql-client mysql-utilities mysql-workbench"],
@@ -68,7 +68,7 @@ Brew = {
         "proxychains-ng",
         "sshfs",
         "markdown",
-        "opam",
+        "yarn",
     ],
     "bash": ["bash-completion"],
     "cxx": [],
@@ -81,9 +81,21 @@ Brew = {
 
 BrewCask = ["dash", "shadowsocksx-ng", "chromium", "iina", "emacs", "beyond-compare"]
 
+NPM = [
+    "livedown",
+    "lua-fmt",
+    "typescript",
+    "bash-language-server",
+    "typescript-language-server",
+    "vscode-json-languageserver",
+    "vscode-css-languageserver-bin",
+    "dockerfile-language-server-nodejs",
+    "vscode-html-languageserver-bin",
+    "vue-language-server",
+    "yaml-language-server",
+]
 
-NPM = ["livedown", "bash-language-server", "lua-fmt", "typescript-language-server"]
-
+YARN = ["prettier"]
 
 LuaRocks = [
     "luacheck",
@@ -98,10 +110,21 @@ LuaRocks = [
 ]
 
 
-Pip = ["pipenv", "ipython", "yapf", "pylint", "black"]
+Pip = [
+    "pipenv",
+    "ipython",
+    "yapf",
+    "pylint",
+    "black",
+    "cmake-language-server",
+    "cmake_format",
+]
 
-GO = ["GO111MODULE=on go get golang.org/x/tools/gopls@latest"]
-
+GO = [
+    "GO111MODULE=on go get golang.org/x/tools/gopls@latest",
+    "GO111MODULE=on go get mvdan.cc/sh/v3/cmd/shfmt",
+    "go get github.com/jessfraz/dockfmt",
+]
 
 Linux = [
     (
@@ -155,14 +178,17 @@ def main():
             )
         )
 
+    if YARN:
+        logging.debug("yarn add  --dev --exact  {}".format(" ".join(NPM)))
+
     if LuaRocks:
         logging.debug("luarocks install {}".format(" ".join(LuaRocks)))
 
     if Pip:
-        logging.debug("pip3 install {}".format(" ".join(Pip)))
+        logging.debug("pip3 install --user {}".format(" ".join(Pip)))
 
     if GO:
-        logging.debug("go get {}".format(" ".join(GO)))
+        logging.debug(" ".join(GO))
 
 
 if __name__ == "__main__":
