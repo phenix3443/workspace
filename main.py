@@ -3,10 +3,12 @@
 import logging
 
 AptPPA = [
+    # zeal
     "add-apt-repository ppa:zeal-developers/ppa",
     "curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -",
     "sudo sh -c \"echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list\"",
-    "add-apt-repository ppa:apt-fast/stable",  # apt-fast
+    # apt-fast
+    "add-apt-repository ppa:apt-fast/stable",
     "apt update",  # 始终放在最后
 ]
 
@@ -49,10 +51,10 @@ APT = {
         "libtool",
         "gcc",
     ],
-    "lua": ["lua luarocks"],
+    "lua": ["lua5.1 lua5.3 luarocks"],
     "python": ["python3 python3-pip"],
     "golang": ["golang"],
-    "js": ["npm node yarn"],
+    "js": ["npm yarn"],
     "markdown": ["markdown"],
     "git": ["git git-flow"],
     "mysql": ["mysql-server mysql-client mysql-utilities mysql-workbench"],
@@ -135,18 +137,23 @@ Linux = [
 ]
 
 Shell = [
-    """echo [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] \&\& . "/usr/local/etc/profile.d/bash_completion.sh"' >> ~/.bash_profile""",  # install bash completion
+    # install bash completion
+    """echo [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] \&\& . "/usr/local/etc/profile.d/bash_completion.sh"' >> ~/.bash_profile""",
+    # 安装git-flow-completion
     (
         "mkdir -p ~/github && cd ~/github",
         " && git clone git@github.com:bobthecow/git-flow-completion.git",
         " && cp git-flow-completion/git-flow-completion.bash /usr/local/etc/bash_completion.d/",
-    ),  # 安装git-flow-completion
+    ),
+    # 设置bcompare
     (
         "git config --global diff.tool bc3",
         "&& git config --global merge.tool bc3",
         "&& git config --global mergetool.bc3 trustExitCode true",
         "&& git config --global mergetool.keepBackup false",
     ),
+    # docker
+    ("curl -fsSL https://get.docker.com -o get-docker.sh ", "sudo sh get-docker.sh"),
 ]
 
 
