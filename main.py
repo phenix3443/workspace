@@ -39,7 +39,7 @@ APT = {
         "tmux",
         "zeal",
         "zssh",
-        " wine64",
+        "wine-development",
     ],
     "cxx": [
         "cppcheck",
