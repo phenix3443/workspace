@@ -82,7 +82,15 @@ Brew = {
     "git": ["git", "git-flow"],
 }
 
-BrewCask = ["dash", "shadowsocksx-ng", "chromium", "iina", "emacs", "beyond-compare"]
+BrewCask = [
+    "dash",
+    "shadowsocksx-ng",
+    "chromium",
+    "iina",
+    "emacs",
+    "beyond-compare",
+    "mysqlworkbench",
+]
 
 NPM = [
     "livedown",
