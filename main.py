@@ -129,6 +129,7 @@ Pip = [
     "black",
     "cmake-language-server",
     "cmake_format",
+    "pygments",
 ]
 
 GO = [
