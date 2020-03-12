@@ -72,6 +72,7 @@ Brew = {
         "sshfs",
         "markdown",
         "yarn",
+        "mysql mysql-client",
     ],
     "bash": ["bash-completion"],
     "cxx": [],
