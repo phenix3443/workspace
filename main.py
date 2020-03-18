@@ -200,7 +200,7 @@ def main():
         logging.debug("yarn add  --dev --exact  {}".format(" ".join(NPM)))
 
     if LuaRocks:
-        logging.debug("luarocks install {}".format(" ".join(LuaRocks)))
+        logging.debug("luarocks install --local {}".format(" ".join(LuaRocks)))
 
     if Pip:
         logging.debug("pip3 install --user {}".format(" ".join(Pip)))
