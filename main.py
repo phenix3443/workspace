@@ -91,6 +91,7 @@ BrewCask = [
     "emacs",
     "beyond-compare",
     "mysqlworkbench",
+    "proxifier",
 ]
 
 NPM = [
