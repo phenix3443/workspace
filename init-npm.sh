@@ -1,3 +1,4 @@
+npm config set registry https://registry.npm.taobao.org && \
 sudo npm i -g \
      bash-language-server \
      livedown \
@@ -9,6 +10,3 @@ sudo npm i -g \
      vue-language-server \
      dockerfile-language-server-nodejs \
      yaml-language-server
-
-
-npm install --save-dev --save-exact prettier
