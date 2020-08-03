@@ -12,12 +12,14 @@ echo "create gitlab dir"
 GITLAB_PATH="~/gitlab/"
 mkdir ${GITLAB_PATH}
 
-echo "install softwares"
+echo "for application"
 sudo apt update && \
     apt upgrade -y && \
     apt install -y shutter alacarte chromium-browser smplay wine-development \
-        zssh sshfs tmux aria2 curl shadowsocks-libev proxychains4
+        aria2 curl
 
+echo "for GFW"
+sudo apt install shadowsocks-libev proxychains4
 
 echo "install zeal" && \
     sudo add-apt-repository ppa:zeal-developers/ppa && \
@@ -38,10 +40,17 @@ echo "install sublime" && \
     sudo apt-get update && apt-get install sublime-text
 
 
+echo "for terminal"
+sudo apt install tmux bash-completion powerline fonts-powerline
+
+echo "for git"
+sudo apt install git git-flow
+
+echo "for ssh"
+sudo apt install zssh sshfs
 
 echo "config develop enviroments"
-sudo apt install -y build-essential automake autoconf libtool gcc cmake bash-completion powerline fonts-powerline python3-pygit2 git git-flow silversearcher-ag python-pygments
-
+sudo apt install -y build-essential automake autoconf libtool gcc cmake python3-pygit2
 
 echo "common IDE"
 sudo apt install -y global
