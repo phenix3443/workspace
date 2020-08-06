@@ -52,7 +52,7 @@ sudo apt install zssh sshfs
 echo "config develop enviroments"
 sudo apt install -y build-essential automake autoconf libtool gcc cmake python3-pygit2
 
-echo "common IDE"
+echo "common emacs"
 sudo apt install -y global
 
 echo "config C/C++"
