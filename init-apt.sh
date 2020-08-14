@@ -16,7 +16,10 @@ echo "for application"
 sudo apt update && \
     apt upgrade -y && \
     apt install -y shutter alacarte chromium-browser smplay wine-development \
-        aria2 curl
+        aria2 curl snapd
+
+echo "for snap"
+sudo apt install -y snapd && sudo systemctl enable --now snapd.socket
 
 echo "for GFW"
 sudo apt install shadowsocks-libev proxychains4

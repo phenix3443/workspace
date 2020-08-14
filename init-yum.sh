@@ -5,6 +5,8 @@ sudo yum install -y redhat-lsb-core
 echo "EPEL"
 sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
+echo "for snap"
+sudo yum install -y snapd && sudo systemctl enable --now snapd.socket
 
 echo "for shell"
 sudo yum install -y bash-completion bash-completion-extras
