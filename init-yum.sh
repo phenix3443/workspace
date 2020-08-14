@@ -14,3 +14,4 @@ sudo yum install -y gcc gcc-c++ automake autoconf libtool make
 
 echo "for emacs"
 sudo yum install -y gtk3-devel gnutls-devel libXpm-devel libpng-devel libtiff-devel libjpeg-devel ncurses-devel gpm-devel
+sudo yum install the_silver_searcher

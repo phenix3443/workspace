@@ -29,7 +29,7 @@ echo "for bash"
 brew install bash-completion
 
 echo "for emacs"
-brew install the_silver_searcher
+brew install the_silver_searcher ccls
 
 echo "for c/cpp"
 brew install cppcheck

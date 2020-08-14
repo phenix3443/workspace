@@ -56,7 +56,7 @@ echo "config develop enviroments"
 sudo apt install -y build-essential automake autoconf libtool gcc cmake python3-pygit2
 
 echo "common emacs"
-sudo apt install -y global
+sudo apt install -y global ccls
 
 echo "config C/C++"
 sudo apt install -y cppcheck clang clang-format
