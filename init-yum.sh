@@ -11,5 +11,4 @@ sudo yum install -y bash-completion bash-completion-extras
 sudo yum install -y gcc gcc-c++ automake autoconf libtool make
 
 echo "for emacs"
-brew install global
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+sudo yum install -y gtk3-devel gnutls-devel libXpm-devel libpng-devel libtiff-devel libjpeg-devel ncurses-devel gpm-devel
