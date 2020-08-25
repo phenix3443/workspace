@@ -5,17 +5,17 @@
 PROJECT_DIR=$(cd $(dirname $0);pwd)
 
 echo "creat github dir"
-GITHUB_PATH="~/github/"
-mkdir ${GITHUB_PATH}
+GITHUB_PATH="~/github"
+mkdir -p ${GITHUB_PATH}
 
 echo "create gitlab dir"
-GITLAB_PATH="~/gitlab/"
-mkdir ${GITLAB_PATH}
+GITLAB_PATH="~/gitlab"
+mkdir -p ${GITLAB_PATH}
 
 echo "for application"
 sudo apt update && \
-    apt upgrade -y && \
-    apt install -y shutter alacarte chromium-browser smplay wine-development \
+    suod apt upgrade -y && \
+    suod apt install -y shutter alacarte chromium-browser smplay wine-development \
         aria2 curl snapd
 
 echo "for snap"
@@ -24,7 +24,7 @@ sudo apt install -y snapd && sudo systemctl enable --now snapd.socket
 echo "for GFW"
 sudo apt install shadowsocks-libev proxychains4
 
-echo "install zeal" && \
+echo "for zeal" && \
     sudo add-apt-repository ppa:zeal-developers/ppa && \
     sudo apt install -y zeal
 
@@ -33,15 +33,6 @@ echo "install albert" && \
     echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list && \
     curl -fsSL https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home:manuelschneid3r.gpg > /dev/null && \
     sudo apt update && sudo apt install albert
-
-
-# https://www.sublimetext.com/docs/3/linux_repositories.html
-echo "install sublime" && \
-    wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - && \
-    sudo apt-get install apt-transport-https && \
-    echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list && \
-    sudo apt-get update && apt-get install sublime-text
-
 
 echo "for terminal"
 sudo apt install tmux bash-completion powerline fonts-powerline
@@ -86,32 +77,3 @@ echo "config oracle-jdk"
 # add-apt-repository ppa:linuxuprising/java
 # apt update
 # apt install -y oracle-java11-installer oracle-java11-set-default
-
-
-
-echo "install ctags for global"
-ctags for gtags
-cd ${GITHUB_PATH}
-git clone git@github.com:universal-ctags/ctags.git
-cd ctags
-./autogen.sh
-./configure && make -j4 && make install && cd -
-cd ${PROJECT_DIR}
-
-echo "install pgFormatter for sqlformater"
-cd ${GITHUB_PATH}
-git clone git@github.com:darold/pgFormatter.git && \
-    cd pgFormatter && \
-    perl Makefile.PL && make && sudo make install && \
-    cd ${PROJECT_DIR}
-
-
-
-
-echo "config proxychains4"
-mkdir ~/.proxychains
-cp dotfiles/_proxychains/proxychains.conf ~/.proxychains
-
-echo "config powerline"
-mkdir ~/.config/powerline
-ln dotfiles/_config/powerline/config.json ~/.config/powerline/config.json
