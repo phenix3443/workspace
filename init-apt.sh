@@ -68,10 +68,10 @@ echo "config markdown"
 sudo apt install -y markdown
 
 echo "install php"
-sudo apt install php phpmd php-codesniffer
+sudo apt install -y php phpmd php-codesniffer
 
 echo "config open-jdk"
 # sudo apt install -y default-jdk
 
 echo "config oracle-jdk"
-# sudo add-apt-repository ppa:linuxuprising/java && sudo apt update && sudo apt install -y oracle-java11-installer oracle-java11-set-default
+# sudo add-apt-repository -y ppa:linuxuprising/java && sudo apt update && sudo apt install -y oracle-java11-installer oracle-java11-set-default

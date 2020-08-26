@@ -10,7 +10,7 @@ mkdir ${GITLAB_PATH}
 GITLAB_PATH="~/gitlab/"
 
 echo "for application"
-brew cask install chromium iina  proxifier
+brew cask install chromium iina  proxifier charles
 
 echo "for GFW"
 brew cask install shadowsocksx-ng
