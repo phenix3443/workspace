@@ -49,7 +49,7 @@ echo "for javascript"
 brew install yarn npm node
 
 echo "for makrdown"
-brew install markdown
+brew install markdown pandoc
 
 echo "for java"
 

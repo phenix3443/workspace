@@ -65,7 +65,7 @@ echo "config JavaScript"
 sudo apt install -y npm yarn
 
 echo "config markdown"
-sudo apt install -y markdown
+sudo apt install -y markdown pandoc
 
 echo "install php"
 sudo apt install -y php phpmd php-codesniffer
