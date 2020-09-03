@@ -16,7 +16,7 @@ echo "install softwares"
 sudo apt update && \
     apt upgrade -y && \
     apt install -y shutter alacarte chromium-browser smplay wine-development \
-        zssh sshfs tmux aria2 curl shadowsocks-libev proxychains4
+        zssh sshfs tmux aria2 curl shadowsocks-libev proxychains4 unzip
 
 
 echo "install zeal" && \
