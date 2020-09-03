@@ -8,6 +8,8 @@ git config --global merge.tool bc3
 git config --global mergetool.bc3 trustExitCode true
 git config --global mergetool.keepBackup false
 
+git config --global url."git@github.com:".insteadOf https://github.com/
+
 echo "config git-flow"
 git clone git@github.com:bobthecow/git-flow-completion.git && \
 sudo cp git-flow-completion/git-flow-completion.bash /etc/bash_completion.d && \

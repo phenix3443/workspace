@@ -9,14 +9,27 @@ echo "create gitlab dir"
 mkdir ${GITLAB_PATH}
 GITLAB_PATH="~/gitlab/"
 
-echo "common"
-brew install zssh tmux the_silver_searcher sshfs git git-flow
+echo "for application"
+brew cask install chromium iina  proxifier charles
+
+echo "for GFW"
+brew cask install shadowsocksx-ng
+
+echo "for terminal"
+brew install tmux
+brew cask install iterm2
+
+echo "for git"
+brew install git git-floww
+
+echo "for ssh"
+brew install zssh sshfs
 
 echo "for bash"
 brew install bash-completion
 
 echo "for emacs"
-brew install the_silver_searcher
+brew install the_silver_searcher ccls
 
 echo "for c/cpp"
 brew install cppcheck
@@ -36,14 +49,14 @@ echo "for javascript"
 brew install yarn npm node
 
 echo "for makrdown"
-brew install markdown
+brew install markdown pandoc
 
 echo "for java"
 
 echo "for swift"
 
 echo "for mysql"
-brew install mysql mysql-client
+brew install mysql mysql-client  mysqlworkbench
 
 echo "for IDE"
-brew cask install android-studio dash shadowsocksx-ng chromium iina emacs beyond-compare mysqlworkbench proxifier
+brew cask install android-studio dash emacs beyond-compare

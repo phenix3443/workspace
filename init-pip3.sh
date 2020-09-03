@@ -1,6 +1,12 @@
 echo "install 常用 python 库"
 
-pip3 install --user -i https://mirrors.aliyun.com/pypi/simple\
+mkdir ~/.config/pip
+
+echo "[global]
+index-url=https://mirrors.aliyun.com/pypi/simple
+" > ~/.config/pip/pip.conf
+
+pip3 install --user \
      pipenv \
      ipython \
      yapf \
