@@ -39,6 +39,7 @@ brew install lua5.1 lua5.3 luarocks
 
 echo "for python"
 brew install python3
+brew cask install dotnet-sdk
 
 echo "for golang"
 brew install golang
