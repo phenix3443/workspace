@@ -32,7 +32,7 @@ echo "for emacs"
 brew install the_silver_searcher ccls
 
 echo "for c/cpp"
-brew install cppcheck
+brew install cppcheck clang-format
 
 echo "for lua"
 brew install lua5.1 lua5.3 luarocks
