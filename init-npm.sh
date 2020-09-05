@@ -10,4 +10,5 @@ sudo npm i -g \
      vue-language-server \
      dockerfile-language-server-nodejs \
      javascript-typescript-langserver \
-     yaml-language-server
+     yaml-language-server \
+     pyright
