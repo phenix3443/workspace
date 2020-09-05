@@ -9,4 +9,5 @@ sudo npm i -g \
      vscode-html-languageserver-bin \
      vue-language-server \
      dockerfile-language-server-nodejs \
+     javascript-typescript-langserver \
      yaml-language-server
